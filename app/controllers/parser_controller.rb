@@ -1,8 +1,20 @@
 class ParserController < ApplicationController
-  # def upload
-  #   @file = params[:csv]
-  #   SmarterCSV.process(@file.original_filename)
-  # end
+
+  def submit_text
+
+  end
+
+  def upload
+    selection = params[:location_source]
+    @text     = params[:article_content]
+    uri       = URI.encode(@text)
+
+    if selection == 'mashape'
+      Article.search_text_for_mashape_location(uri)
+    elseif selection == 'localgeo'
+      Article.search_text_for_location(uri)
+    end
+  end
 
   # def locations
   #   @text = 'thetext'

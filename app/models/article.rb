@@ -23,9 +23,8 @@ class Article < ActiveRecord::Base
     end
   end
 
-  def self.search_text_for_location(text)
-    uri = URI.encode(text)
-    response = Unirest::get "https://webknox-text-processing.p.mashape.com/text/entities?text="+uri,headers: {
+  def self.search_text_for_mashape_location(text)
+    response = Unirest::get "https://webknox-text-processing.p.mashape.com/text/entities?text="+text,headers: {
       "X-Mashape-Authorization" => ENV['MASHAPE_KEY']
     }
     puts response

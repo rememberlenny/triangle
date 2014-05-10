@@ -1,0 +1,13 @@
+<h1>Submit here</h1>
+
+<%= form_tag({action: :upload}, multipart: true) do %>
+
+  <%= radio_button_tag(:location_source, "mashape") %>
+  <%= label_tag(:location_source_child, "Mashape API") %>
+  <%= radio_button_tag(:location_source, "localgeo") %>
+  <%= label_tag(:location_source_adult, "Geolite Local") %>
+
+  <%= text_area_tag 'article_content' %>
+
+  <%= submit_tag("Parse") %>
+<% end %>
