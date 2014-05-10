@@ -12,15 +12,11 @@ class ParserController < ApplicationController
     puts 'Selection: ' + selection
 
     if selection == 'mashape'
-      Article.search_text_for_mashape_location(uri)
-    elsif selection == 'localgeo'
-      Article.search_text_for_location(uri)
+      @parse_result = Article.search_text_for_mashape_location(uri)
+    else selection == 'localgeo'
+    # Note: else, not elsif
+      @parse_result = Article.search_text_for_location(uri)
     end
-
-    redirect_to parser_complete_path
-  end
-
-  def complete
 
 
   end

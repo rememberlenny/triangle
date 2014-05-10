@@ -18,16 +18,17 @@ class Article < ActiveRecord::Base
   def self.review_all_city_results(local, word)
     if( local != nil)
       if( local.city_name != nil)
-        puts "Found: " + word + ", a city in " + local.subdivision_name + ", " + local.country_name
+        return_info "Found: " + word + ", a city in " + local.subdivision_name + ", " + local.country_name
+        puts return_info
       end
     end
   end
 
   def self.search_text_for_mashape_location(text)
-    response = Unirest::get "https://webknox-text-processing.p.mashape.com/text/entities?text="+text,headers: {
+    parse_response = Unirest::get "https://webknox-text-processing.p.mashape.com/text/entities?text="+text,headers: {
       "X-Mashape-Authorization" => ENV['MASHAPE_KEY']
     }
-    puts response
+    return parse_response
   end
 
   def self.search_text_for_location(text)
@@ -35,6 +36,7 @@ class Article < ActiveRecord::Base
     puts 'Local'
     puts '++++++++++++'
     puts text
+    parse_response = text
+    return parse_response
   end
-
 end
