@@ -12,6 +12,7 @@ gem 'mapbox-rails'
 gem 'maxminddb'
 gem 'smarter_csv'
 gem 'nokogiri'
+gem 'unirest'
 
 group :doc do
   gem 'sdoc', require: false
