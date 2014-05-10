@@ -9,7 +9,7 @@ class Article < ActiveRecord::Base
   def self.check_for_location(words)
     words.each do |word|
       if( Location.find_by(city_name: word) != nil)
-        puts "Found"
+        puts "Found" + word
       end
     end
   end
