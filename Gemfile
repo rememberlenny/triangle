@@ -11,6 +11,7 @@ gem 'foundation-rails'
 gem 'mapbox-rails'
 gem 'maxminddb'
 gem 'smarter_csv'
+gem 'nokogiri'
 
 group :doc do
   gem 'sdoc', require: false

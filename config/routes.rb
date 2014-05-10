@@ -1,4 +1,6 @@
 Atriangle::Application.routes.draw do
+  resources :articles
+
   resources :locations do
     collection { post :import }
   end
