@@ -10,6 +10,7 @@ gem 'jbuilder', '~> 1.2'
 gem 'foundation-rails'
 gem 'mapbox-rails'
 gem 'maxminddb'
+gem 'smarter_csv'
 
 group :doc do
   gem 'sdoc', require: false

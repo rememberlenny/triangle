@@ -1,6 +1,14 @@
 Atriangle::Application.routes.draw do
+  resources :locations do
+    collection { post :import }
+  end
+
+  resources :products do
+    collection { post :import }
+  end
   get "page/home"
-  root 'page#home'
+  get "parser/upload"
+  root 'locations#index'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
