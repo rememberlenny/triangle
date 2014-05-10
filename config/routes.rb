@@ -9,7 +9,9 @@ Atriangle::Application.routes.draw do
     collection { post :import }
   end
   get "page/home"
-  get "parser/upload"
+  get "parser/submit_text"
+  get "parser/complete"
+  match "/parser/upload" => "parser#upload", via: :post
   root 'locations#index'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

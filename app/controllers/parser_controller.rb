@@ -9,11 +9,20 @@ class ParserController < ApplicationController
     @text     = params[:article_content]
     uri       = URI.encode(@text)
 
+    puts 'Selection: ' + selection
+
     if selection == 'mashape'
       Article.search_text_for_mashape_location(uri)
-    elseif selection == 'localgeo'
+    elsif selection == 'localgeo'
       Article.search_text_for_location(uri)
     end
+
+    redirect_to parser_complete_path
+  end
+
+  def complete
+
+
   end
 
   # def locations

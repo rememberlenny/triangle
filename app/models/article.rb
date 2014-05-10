@@ -30,4 +30,11 @@ class Article < ActiveRecord::Base
     puts response
   end
 
+  def self.search_text_for_location(text)
+    puts '++++++++++++'
+    puts 'Local'
+    puts '++++++++++++'
+    puts text
+  end
+
 end
