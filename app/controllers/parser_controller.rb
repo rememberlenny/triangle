@@ -9,13 +9,19 @@ class ParserController < ApplicationController
     @text     = params[:article_content]
     uri       = URI.encode(@text)
 
-    puts 'Selection: ' + selection
+    if(selection)
+      puts 'Selection: ' + selection
+    end
 
     if selection == 'mashape'
+      @parse_medium = 'Mashape'
       @parse_result = Article.search_text_for_mashape_location(uri)
-    else selection == 'localgeo'
+    elsif selection == 'localgeo'
     # Note: else, not elsif
-      @parse_result = Article.search_text_for_location(uri)
+      @parse_medium = 'Local Geo Table'
+      @parse_result = Article.search_text_for_geotable_location(@text)
+    else
+      @parse_result = 'No selection was made.'
     end
 
 
