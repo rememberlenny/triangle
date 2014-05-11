@@ -13,6 +13,7 @@ gem 'maxminddb'
 gem 'smarter_csv'
 gem 'nokogiri'
 gem 'unirest'
+gem "squeel"
 
 group :doc do
   gem 'sdoc', require: false

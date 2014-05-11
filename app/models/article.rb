@@ -9,7 +9,8 @@ class Article < ActiveRecord::Base
   def self.check_for_location(words)
     final_results = []
     words.each do |word|
-      locals = Location.where(city_name: word)
+      locals = Location.where{ city_name =~ "%#{ word }%" }
+
       locals.each do |local|
          final_results = final_results.push(review_all_city_results(local, word))
       end
@@ -24,7 +25,7 @@ class Article < ActiveRecord::Base
   def self.review_all_city_results(local, word)
     if( local != nil)
       if( local.city_name != nil)
-        return_info = "Found: " + word + ", a city in " + local.subdivision_name + ", " + local.country_name
+        return_info = "Found: " + local.city_name + ", a city in " + local.subdivision_name + ", " + local.country_name
         return return_info
       end
     end

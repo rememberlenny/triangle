@@ -8,6 +8,7 @@ Atriangle::Application.routes.draw do
   resources :products do
     collection { post :import }
   end
+
   get "page/home"
   get "parser/submit_text"
   get "parser/complete"
