@@ -8,6 +8,6 @@ Starting with geography, then moving to companies. and eventually other areas, d
 
 # Concept
 
-![Grid Example](https://raw.github.com/rememberlenny/a-triangle/blob/master/app/assets/images/demo/demo-grid.gif)
+![Grid Example](https://raw.githubusercontent.com/rememberlenny/a-triangle/master/app/assets/images/demo/demo-grid.gif)
 
-![Single Example](https://raw.github.com/rememberlenny/a-triangle/blob/master/app/assets/images/demo/demo-single.gif)
+![Single Example](https://raw.githubusercontent.com/rememberlenny/a-triangle/master/app/assets/images/demo/demo-single.gif)
