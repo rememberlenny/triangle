@@ -16,8 +16,6 @@
 		<string>Gotham-Bold</string>
 		<string>Gotham-Bold</string>
 		<string>Gotham-Bold</string>
-		<string>Gotham-Bold</string>
-		<string>Gotham-Bold</string>
 		<string>Gotham-Book</string>
 		<string>Gotham-Medium</string>
 		<string>Gotham-Book</string>
@@ -35,9 +33,11 @@
 		<string>Gotham-Bold</string>
 		<string>Gotham-Medium</string>
 		<string>Gotham-Medium</string>
+		<string>Gotham-Bold</string>
+		<string>Gotham-Bold</string>
 	</array>
 	<key>length</key>
-	<integer>2179344</integer>
+	<integer>2156272</integer>
 	<key>version</key>
 	<integer>18</integer>
 </dict>
