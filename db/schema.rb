@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140510152221) do
+ActiveRecord::Schema.define(version: 20140513045040) do
 
   create_table "articles", force: true do |t|
     t.text     "content"
@@ -47,6 +47,16 @@ ActiveRecord::Schema.define(version: 20140510152221) do
     t.string   "city_name"
     t.integer  "metro_code"
     t.string   "time_zone"
+  end
+
+  create_table "users", force: true do |t|
+    t.string   "provider"
+    t.string   "uid"
+    t.string   "name"
+    t.string   "oauth_token"
+    t.datetime "oauth_expires_at"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
 end
