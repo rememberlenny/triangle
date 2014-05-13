@@ -4,4 +4,7 @@ class PageController < ApplicationController
 
   def tos
   end
+
+  def error
+  end
 end
