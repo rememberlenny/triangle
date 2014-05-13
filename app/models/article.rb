@@ -9,7 +9,8 @@ class Article < ActiveRecord::Base
   def self.check_for_location(words)
     final_results = []
     words.each do |word|
-      locals = Location.where("LOWER(city_name) LIKE ?", "%#{word.downcase}%")
+      locals = Location.where{ city_name =~ "%#{word}%" }
+
       locals.each do |local|
          final_results = final_results.push(review_all_city_results(local, word))
       end
