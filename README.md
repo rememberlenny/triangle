@@ -1,6 +1,8 @@
+Repo: https://github.com/rememberlenny/a-triangle
 
+Site: http://atriangle.com
 
-# Unnamed project
+# A Triangle
 
 Make news content relevant to readers by integrating with their digital social network.
 
