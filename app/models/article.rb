@@ -33,8 +33,11 @@ class Article < ActiveRecord::Base
 
   def self.search_text_for_mashape_location(text)
     array = text.split(' ')
+    puts array
     mapped_array = array.each.capitalize
+    puts mapped_array
     final_text = mapped_array.join(' ')
+    puts final_text
     parse_response = Unirest::get "https://webknox-text-processing.p.mashape.com/text/entities?text="+final_text,
     headers: {
       "X-Mashape-Authorization" => ENV['MASHAPE_KEY']
