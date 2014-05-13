@@ -10,7 +10,6 @@ class Article < ActiveRecord::Base
     final_results = []
     words.each do |word|
       locals = Location.where{ city_name =~ "%#{word}%" }
-
       locals.each do |local|
          final_results = final_results.push(review_all_city_results(local, word))
       end
@@ -50,7 +49,7 @@ class Article < ActiveRecord::Base
     headers: {
       "X-Mashape-Authorization" => ENV['MASHAPE_KEY']
     }
-    return parse_response
+    return parse_response.body
   end
 
   def self.search_text_for_geotable_location(text)
