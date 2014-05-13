@@ -12,16 +12,47 @@
   </head>
 
   <body>
+
+<nav class="top-bar" data-topbar>
+  <ul class="title-area">
+    <li class="name">
+      <h1><a href="#">A Triangle</a></h1>
+    </li>
+     <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+    <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+  </ul>
+
+  <section class="top-bar-section">
+    <!-- Right Nav Section -->
+    <ul class="right" id="user-widget">
+      <% if current_user %>
+      <li>
+        <a href="#">
+          <strong><%= current_user.name %></strong>
+        </a>
+      </li>
+      <li>
+        <%= link_to "Sign out", signout_path, id: "sign_out" %>
+      </li>
+      <% else %>
+      <li class="active">
+        <%= link_to "Sign in with Facebook", "/auth/facebook", id: "sign_in" %>
+      </li>
+      <% end %>
+      <li class="has-dropdown">
+        <a href="#">Right Button Dropdown</a>
+        <ul class="dropdown">
+          <li><a href="#">First link in dropdown</a></li>
+        </ul>
+      </li>
+    </ul>
+
+
+  </section>
+</nav>
+
     <div class="row">
       <%= yield %>
-    </div>
-    <div id="user-widget">
-      <% if current_user %>
-        Welcome <strong><%= current_user.name %></strong>!
-        <%= link_to "Sign out", signout_path, id: "sign_out" %>
-      <% else %>
-        <%= link_to "Sign in with Facebook", "/auth/facebook", id: "sign_in" %>
-      <% end %>
     </div>
     <%= javascript_include_tag "application" %>
   </body>
