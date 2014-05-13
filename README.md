@@ -11,3 +11,9 @@ Starting with geography, then moving to companies. and eventually other areas, d
 ![Grid Example](https://raw.githubusercontent.com/rememberlenny/a-triangle/master/app/assets/images/demo/demo-grid.gif)
 
 ![Single Example](https://raw.githubusercontent.com/rememberlenny/a-triangle/master/app/assets/images/demo/demo-single.gif)
+
+#Requires
+
+- ENV['MASHAPE_KEY']
+- ENV['FB_APP_ID']
+- ENV['FB_APP_SECRET']
