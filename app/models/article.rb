@@ -34,7 +34,10 @@ class Article < ActiveRecord::Base
   def self.search_text_for_mashape_location(text)
     array = text.split(' ')
     puts array
-    mapped_array = array.each.capitalize
+    mapped_array = []
+    array.each do |array_part|
+      mapped_array = mapped_array.push(array_part.capitalize)
+    end
     puts mapped_array
     final_text = mapped_array.join(' ')
     puts final_text
