@@ -14,6 +14,7 @@ gem 'smarter_csv'
 gem 'nokogiri'
 gem 'unirest'
 gem "squeel"
+gem 'newrelic_rpm'
 
 group :doc do
   gem 'sdoc', require: false
