@@ -31,7 +31,7 @@ class Article < ActiveRecord::Base
     end
   end
 
-  def self.capitalize_array(array)
+  def self.capitalize_array(text)
     array = text.split(' ')
     puts array
     mapped_array = []
