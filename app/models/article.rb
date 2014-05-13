@@ -31,7 +31,7 @@ class Article < ActiveRecord::Base
     end
   end
 
-  def self.search_text_for_mashape_location(text)
+  def self.capitalize_array(array)
     array = text.split(' ')
     puts array
     mapped_array = []
@@ -41,7 +41,12 @@ class Article < ActiveRecord::Base
     puts mapped_array
     final_text = mapped_array.join(' ')
     puts final_text
-    parse_response = Unirest::get "https://webknox-text-processing.p.mashape.com/text/entities?text="+final_text,
+    return final_text
+  end
+
+  def self.search_text_for_mashape_location(text)
+    uri       = URI.encode(text)
+    parse_response = Unirest::get "https://webknox-text-processing.p.mashape.com/text/entities?text="+uri,
     headers: {
       "X-Mashape-Authorization" => ENV['MASHAPE_KEY']
     }

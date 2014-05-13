@@ -7,7 +7,6 @@ class ParserController < ApplicationController
   def upload
     selection = params[:location_source]
     @text     = params[:article_content]
-    uri       = URI.encode(@text)
 
     if(selection)
       puts 'Selection: ' + selection
@@ -15,7 +14,7 @@ class ParserController < ApplicationController
 
     if selection == 'mashape'
       @parse_medium = 'Mashape'
-      @parse_result = Article.search_text_for_mashape_location(uri)
+      @parse_result = Article.search_text_for_mashape_location(@text)
     elsif selection == 'localgeo'
     # Note: else, not elsif
       @parse_medium = 'Local Geo Table'
