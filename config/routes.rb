@@ -10,6 +10,7 @@ Atriangle::Application.routes.draw do
   end
 
   get "page/home"
+  get "page/error"
   get "page/tos"
   get "parser/submit_text"
   get "parser/complete"
