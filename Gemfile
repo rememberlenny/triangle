@@ -17,6 +17,8 @@ gem "squeel"
 gem 'newrelic_rpm'
 gem 'omniauth'
 gem 'omniauth-facebook', '1.4.0'
+gem 'rails_12factor'
+
 
 group :doc do
   gem 'sdoc', require: false
