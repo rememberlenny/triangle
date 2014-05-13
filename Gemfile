@@ -15,6 +15,8 @@ gem 'nokogiri'
 gem 'unirest'
 gem "squeel"
 gem 'newrelic_rpm'
+gem 'omniauth'
+gem 'omniauth-facebook', '1.4.0'
 
 group :doc do
   gem 'sdoc', require: false
