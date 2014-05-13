@@ -19,3 +19,4 @@ Starting with geography, then moving to companies. and eventually other areas, d
 - ENV['MASHAPE_KEY']
 - ENV['FB_APP_ID']
 - ENV['FB_APP_SECRET']
+- ENV['SEGMENT_IO_ATRIANGLE']
