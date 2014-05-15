@@ -2,6 +2,8 @@ Repository: [https://github.com/rememberlenny/a-triangle](https://github.com/rem
 
 Site: [http://www.atriangle.com](http://www.atriangle.com)
 
+![Grid Example](https://raw.githubusercontent.com/rememberlenny/a-triangle/master/app/assets/images/facebook/coverimage.png)
+
 # A Triangle
 
 Make news content relevant to readers by integrating with their digital social network.
