@@ -18,6 +18,7 @@ Starting with geography, then moving to companies. and eventually other areas, d
 
 #Requires
 
+- ENV['APP_SECRET']
 - ENV['MASHAPE_KEY']
 - ENV['FB_APP_ID']
 - ENV['FB_APP_SECRET']
