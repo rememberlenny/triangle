@@ -20,3 +20,12 @@ Starting with geography, then moving to companies. and eventually other areas, d
 - ENV['FB_APP_ID']
 - ENV['FB_APP_SECRET']
 - ENV['SEGMENT_IO_ATRIANGLE']
+
+#To-do
+
+- Make user accounts
+- Make user's unique bookmarklet
+- Display the user's bookmarklet information in a page
+- Pull in facebook location into user account
+- Make browser extension
+- Create screenshots
