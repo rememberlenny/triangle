@@ -3,8 +3,9 @@
         <div class="text-center large-5 column">
             <h1>
                 <%= image_tag 'facebook/icon.png' %>
-        </h1>
+            </h1>
         </div>
+      <% if user_signed_in? %>
         <div class="cue large-7 column">
             <div class="floatwrapper" style="margin-top: 70px">
                 <h2 style="gold-like-back">Making news relevant</h2>
@@ -17,10 +18,9 @@
                         </li>
                     </ul>
                     <p><strong>Drag the link above into your bookmarks bar</strong></p>
-
             </div>
-
         </div>
+      <% end %>
     </div>
 
 </div>
