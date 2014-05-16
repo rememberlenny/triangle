@@ -21,6 +21,7 @@ gem 'rails_12factor'
 gem 'analytics-ruby', '~>1.0'
 gem "koala", "~> 1.8.0rc1"
 gem 'delayed_job_active_record'
+gem 'devise'
 
 group :doc do
   gem 'sdoc', require: false

@@ -26,20 +26,6 @@
   <section class="top-bar-section">
     <!-- Right Nav Section -->
     <ul class="right" id="user-widget">
-      <% if current_user %>
-      <li>
-        <a href="#">
-          <strong><%= current_user.name %></strong>
-        </a>
-      </li>
-      <li>
-        <%= link_to "Sign out", signout_path, id: "sign_out" %>
-      </li>
-      <% else %>
-      <li class="active">
-        <%= link_to "Sign in with Facebook", "/auth/facebook", id: "sign_in" %>
-      </li>
-      <% end %>
     </ul>
 
 
