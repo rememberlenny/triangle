@@ -6,10 +6,26 @@ class Article < ActiveRecord::Base
     return check_for_location(article_words)
   end
 
+  def self.iterate(obj)
+    iterate.each do |el|
+      if el.type == obj||arr
+        iterate(el)
+      end
+      parse_text(el)
+    end
+  end
+
+  def self.parse_text(el)
+    arr = el.split
+    arr.each do |word|
+      search_text_for_geotable_location(el)
+    end
+  end
+
   def self.check_for_location(words)
     final_results = []
     words.each do |word|
-      locals = Location.where{ city_name =~ "%#{word}%" }
+      locals = Location.where{ city_name =~ "word" }
       locals.each do |local|
          final_results = final_results.push(review_all_city_results(local, word))
       end
