@@ -1,8 +1,8 @@
 class User < ActiveRecord::Base
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
-  devise :database_authenticatable, :registerable,
-         :omniauthable, :recoverable, :rememberable, :trackable, :validatable
+  devise :database_authenticatable, :registerable, :omniauthable,
+         :recoverable, :rememberable, :trackable, :validatable
 
   def self.from_omniauth(auth)
     where(auth.slice(:provider, :uid)).first_or_initialize.tap do |user|
@@ -39,15 +39,6 @@ class User < ActiveRecord::Base
     facebook { |fb| fb.get_connection("me", "friends").size }
   end
 
-  def password_required?
-    super && provider.blank?
-  end
 
-  def update_with_password(params, *options)
-    if encrypted_password.blank?
-      update_attributes(params, *options)
-    else
-      super
-    end
-  end
+  validates :password, presence: true, length: { minimum: 6 }, unless: Proc.new { |a| !a.new_record? && a.password.blank? }
 end
