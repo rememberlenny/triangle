@@ -1,3 +1,12 @@
+<% content_for :head do %>
+  <%= tag :meta, property: "fb:app_id", content: ENV["FACEBOOK_APP_ID"] %>
+  <%= tag :meta, property: "og:site_name", content: "A Triangle" %>
+  <%= tag :meta, property: "og:type", content: "article" %>
+  <%= tag :meta, property: "og:title", content: @article.name %>
+  <%= tag :meta, property: "og:url", content: article_url(@article) %>
+  <%= tag :meta, property: "og:image", content: request.protocol + request.host_with_port + image_path(@article.image) %>
+<% end %>
+
 <p id="notice"><%= notice %></p>
 
 <p>
