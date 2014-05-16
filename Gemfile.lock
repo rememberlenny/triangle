@@ -61,6 +61,10 @@ GEM
     json (1.8.1)
     jwt (0.1.13)
       multi_json (>= 1.5)
+    koala (1.8.0)
+      addressable
+      faraday
+      multi_json
     mail (2.5.4)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
@@ -169,6 +173,7 @@ DEPENDENCIES
   handlebars_assets
   jbuilder (~> 1.2)
   jquery-rails
+  koala (~> 1.8.0rc1)
   mapbox-rails
   maxminddb
   newrelic_rpm

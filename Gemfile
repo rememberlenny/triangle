@@ -19,6 +19,7 @@ gem 'omniauth'
 gem 'omniauth-facebook', '1.4.0'
 gem 'rails_12factor'
 gem 'analytics-ruby', '~>1.0'
+gem "koala", "~> 1.8.0rc1"
 
 group :doc do
   gem 'sdoc', require: false
