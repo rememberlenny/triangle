@@ -25,16 +25,16 @@
 
   <section class="top-bar-section">
     <!-- Right Nav Section -->
-    <ul class="right" id="user-widget">
-    <% if user_signed_in? %>
-      Logged in as <strong><%= current_user.email %></strong>.
-      <%= link_to 'Edit profile', edit_user_registration_path %> |
-      <%= link_to "Logout", destroy_user_session_path, method: :delete %>
-    <% else %>
-      <%= link_to "Sign up", new_user_registration_path %> |
-      <%= link_to "Login", new_user_session_path %>
-      <%= link_to "Sign in with Facebook", user_omniauth_authorize_path(:facebook) %>
-    <% end %>
+    <ul class="right">
+      <% if user_signed_in? %>
+        <li><a href="">Logged in as <strong><%= current_user.email %></strong>.</a></li>
+        <li><%= link_to 'Edit profile', edit_user_registration_path %></li>
+        <li><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
+      <% else %>
+        <li><%= link_to "Sign up", new_user_registration_path %></li>
+        <li><%= link_to "Login", new_user_session_path %></li>
+        <li><%= link_to "Sign in with Facebook", user_omniauth_authorize_path(:facebook) %></li>
+      <% end %>
     </ul>
 
   </section>
@@ -43,12 +43,12 @@
     <div class="row">
       <% if notice %>
         <div class="alert-box success">
-          <%= notice %> <span class="close">X</span>
+          <%= notice %> <a class="close">x</a>
         </div>
       <% end %>
       <% if alert %>
         <div class="alert-box alert">
-          <%= alert %> <span class="close">X</span>
+          <%= alert %> <a class="close">x</a>
         </div>
       <% end %>
 
