@@ -16,6 +16,9 @@ Starting with geography, then moving to companies. and eventually other areas, d
 
 ![Single Example](https://raw.githubusercontent.com/rememberlenny/a-triangle/master/app/assets/images/demo/demo-single.gif)
 
+# Running
+- Background job: `rake jobs:work`
+
 # Requires
 - ENV['APP_SECRET']
 - ENV['MASHAPE_KEY']
