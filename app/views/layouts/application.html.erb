@@ -41,6 +41,17 @@
 </nav>
 
     <div class="row">
+      <% if notice %>
+        <div class="alert-box success">
+          <%= notice %> <span class="close">X</span>
+        </div>
+      <% end %>
+      <% if alert %>
+        <div class="alert-box alert">
+          <%= alert %> <span class="close">X</span>
+        </div>
+      <% end %>
+
       <%= yield %>
     </div>
     <script>
