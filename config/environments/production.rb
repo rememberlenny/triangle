@@ -80,7 +80,7 @@ Atriangle::Application.configure do
   config.action_dispatch.x_sendfile_header = 'X-Accel-Redirect'
   config.assets.compile = false
 
-  config.action_mailer.default_url_options = { :host => 'www.atriangle.com' }
+  config.action_mailer.default_url_options = { :host => 'atriangle.com' }
 
   # Use default logging formatter so that PID and timestamp are not suppressed.
   config.log_formatter = ::Logger::Formatter.new
