@@ -6,9 +6,10 @@ Site: [http://www.atriangle.com](http://www.atriangle.com)
 
 # A Triangle
 
-Make news content relevant to readers by integrating with their digital social network.
+Discover relevant news by integrating your social network data.
 
-Starting with geography, then moving to companies. and eventually other areas, do natural language processing of news articles while users are reading. If a city/state/county name comes up, the readers social network is cross referenced for people who are/were in those places.
+News is crucial to understand the current events of the world. The barriers to news production and circulation have become nearly non-existent. As a result, there is too much information and too little attention. We miss news that may be important for us to read because we have a hard time distinguishing the signal from the noise. By integrating your existing online presence, A Triangle can help highlight news that may be important for you.
+Starting with geography, then moving to companies. and eventually other areas, A Triangle will do natural language processing of news articles while users are reading. If a city/state/county name comes up, the readers social network is cross referenced for people who are/were in those places. A Triangle can run as a browser plugin, or a widget/module into a news website.
 
 # Concept
 
