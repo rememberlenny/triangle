@@ -1,8 +1,12 @@
 var GetDom = module.export.GetDom = function(saveUrl, processUrl, eventTrigger){
+  //URL to pass for saving to DB: saveUrl,
+  //URL to pass to language parser: forprocessUrl,
+  //Analytics trigger: eventTrigger
   this.blastOff(saveUrl, processUrl);
 };
 
 GetDom.prototype.blastOff = function(saveUrl, processUrl){
+  // Save the DOM!
   var theDom;
   if (document.querySelectorAll){
     console.log('Using querySelectorAll');
