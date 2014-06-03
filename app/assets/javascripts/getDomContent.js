@@ -1,4 +1,4 @@
-var GetDom = function(saveUrl, processUrl){
+var GetDom = function(saveUrl, processUrl, eventTrigger){
   this.blastOff(saveUrl, processUrl);
 };
 
