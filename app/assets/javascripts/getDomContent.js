@@ -1,4 +1,4 @@
-var GetDom = function(saveUrl, processUrl, eventTrigger){
+var GetDom = module.export.GetDom = function(saveUrl, processUrl, eventTrigger){
   this.blastOff(saveUrl, processUrl);
 };
 
