@@ -18,7 +18,7 @@ gem 'omniauth-linkedin'
 gem 'rails_12factor'
 gem "koala", "~> 1.8.0rc1"
 gem 'devise'
-
+gem "skylight"
 
 group :doc do
   gem 'sdoc', require: false
