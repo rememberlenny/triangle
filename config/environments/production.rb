@@ -89,8 +89,8 @@ Newshack::Application.configure do
     enable_starttls_auto: true,
     user_name: ENV['NT_EMAIL_USER'],
     password: ENV['NT_EMAIL_PASS'],
-    authentication: => 'plain',
-    domain: => 'newstriangle.herokuapp.com'
+    :authentication => 'plain',
+    :domain => 'newstriangle.herokuapp.com'
   }
   # Use default logging formatter so that PID and timestamp are not suppressed.
   config.log_formatter = ::Logger::Formatter.new
