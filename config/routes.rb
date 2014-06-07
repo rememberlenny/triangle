@@ -1,11 +1,12 @@
 Newshack::Application.routes.draw do
-  devise_for :users
   root 'pages#home'
   get "social", to: 'pages#social'
   get "feed", to: 'pages#feed'
   get "about", to: 'pages#about'
   get "contact", to: 'pages#contact'
-  devise_for :users, :controllers => { omniauth_callbacks: 'omniauth_callbacks' }
+  devise_for :users, :controllers => { 
+    omniauth_callbacks: 'omniauth_callbacks' 
+  }
   match '/profile/:id/finish_signup' => 'users#finish_signup', via: [:get, :patch], :as => :finish_signup
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
