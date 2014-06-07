@@ -14,8 +14,8 @@
     <!-- Right Nav Section -->
     <ul class="right">
       <li class=""><%=link_to 'About', about_path %></li>
-      <li class=""><%=link_to 'Feed', feed_path %></li>
-      <li class=""><%=link_to 'Social', social_path %></li>
+      <%= render 'devise/menu/registration_items' %>
+      <%= render 'devise/menu/login_items' %>
       <li class=""><%=link_to 'Contact', contact_path %></li>
     </ul>
   </section>
