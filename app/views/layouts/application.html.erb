@@ -12,26 +12,7 @@
   </head>
 
   <body>
-    <nav class="top-bar" data-topbar>
-      <ul class="title-area">
-        <li class="name">
-          <h1><a href="#">News Triangle</a></h1>
-        </li>
-         <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
-        <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
-      </ul>
-
-      <section class="top-bar-section">
-        <!-- Right Nav Section -->
-        <ul class="right">
-          <li class=""><%=link_to 'About', about_path %></li>
-          <li class=""><%=link_to 'Feed', feed_path %></li>
-          <li class=""><%=link_to 'Social', social_path %></li>
-          <li class=""><%=link_to 'Contact', contact_path %></li>
-        </ul>
-
-      </section>
-    </nav>
+    <%= render 'layouts/topnav' %>
     <%= yield %>
     <%= javascript_include_tag "application" %>
   </body>
