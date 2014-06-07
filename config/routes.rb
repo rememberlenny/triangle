@@ -1,9 +1,9 @@
 Newshack::Application.routes.draw do
-  get "pages/home"
-  get "pages/social"
-  get "pages/feed"
-  get "pages/about"
-  get "pages/contact"
+  root 'pages#home'
+  get "social", to: 'pages#social'
+  get "feed", to: 'pages#feed'
+  get "about", to: 'pages#about'
+  get "contact", to: 'pages#contact'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
