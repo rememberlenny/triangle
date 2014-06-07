@@ -1,3 +1,7 @@
+<% if user_signed_in? %>
+
+<% else %>
+
 <div class="large-12 colum">
   <img src="http://fakeimg.pl/1000x300?text=pretty picture here">
   <h1>News tips <br>from your friends</h1>
@@ -31,8 +35,6 @@
   </div>
 </div>
 
-<div class="large-12 column">
-  <%= link_to new_user_registration_path, class: 'button large-12' do %>
-  Connect now
-  <% end %>
-</div>
+<%= render 'layouts/acquisition/connect' %>
+
+<% end %>
