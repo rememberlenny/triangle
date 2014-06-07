@@ -12,7 +12,9 @@ gem 'smarter_csv'
 gem 'unirest'
 gem "squeel"
 gem 'omniauth'
-gem 'omniauth-facebook', '1.4.0'
+gem 'omniauth-twitter'
+gem 'omniauth-facebook'
+gem 'omniauth-linkedin'
 gem 'rails_12factor'
 gem "koala", "~> 1.8.0rc1"
 gem 'devise'
