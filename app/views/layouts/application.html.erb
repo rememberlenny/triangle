@@ -15,8 +15,12 @@
     <%= render 'layouts/topnav' %>
     
     <div class="row">
+      <% if notice %>
       <p class="info alert-box"><%= notice %></p>
+      <% end %>
+      <% if alert %>
       <p class="alert alert-box"><%= alert %></p>
+      <% end %>
       <%= yield %>
     </div>
 
