@@ -1,4 +1,5 @@
 Newshack::Application.routes.draw do
+  devise_for :users
   root 'pages#home'
   get "social", to: 'pages#social'
   get "feed", to: 'pages#feed'
