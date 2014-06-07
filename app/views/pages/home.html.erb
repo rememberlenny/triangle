@@ -1,40 +1,42 @@
 <% if user_signed_in? %>
 
+  <%= render 'dashboard/main' %>
+
 <% else %>
 
-<div class="large-12 colum">
-  <img src="http://fakeimg.pl/1000x300?text=pretty picture here">
-  <h1>News tips <br>from your friends</h1>
-  <p>Your social networks are a treasure trove of data. Help identify news that relates to you by filtering it with your social network.</p>
-</div>
+  <div class="large-12 colum">
+    <img src="http://fakeimg.pl/1000x300?text=pretty picture here">
+    <h1>News tips <br>from your friends</h1>
+    <p>Your social networks are a treasure trove of data. Help identify news that relates to you by filtering it with your social network.</p>
+  </div>
 
-<div class="large-12 column">
-  <div class="row">
-      <h2>News Triangle uses your networks to highlight relevant news</h2>
-    <div class="large-4 column text-center">
-      <%= image_tag 'locationicon.png' %>
-      <h3>Locations</h3>
-      <%= link_to about_path, class: 'button secondary large-12' do %>
-      Learn more
-      <% end %>
-    </div>
-    <div class="large-4 column text-center">
-      <%= image_tag 'companyicon.png' %>
-      <h3>Companies</h3>
-      <%= link_to about_path, class: 'button secondary large-12' do %>
-      Learn more
-      <% end %>
-    </div>
-    <div class="large-4 column text-center">
-      <%= image_tag 'connectionicon.png' %>
-      <h3>Connections</h3>
-      <%= link_to about_path, class: 'button secondary large-12' do %>
-      Learn more
-      <% end %>
+  <div class="large-12 column">
+    <div class="row">
+        <h2>News Triangle uses your networks to highlight relevant news</h2>
+      <div class="large-4 column text-center">
+        <%= image_tag 'locationicon.png' %>
+        <h3>Locations</h3>
+        <%= link_to about_path, class: 'button secondary large-12' do %>
+        Learn more
+        <% end %>
+      </div>
+      <div class="large-4 column text-center">
+        <%= image_tag 'companyicon.png' %>
+        <h3>Companies</h3>
+        <%= link_to about_path, class: 'button secondary large-12' do %>
+        Learn more
+        <% end %>
+      </div>
+      <div class="large-4 column text-center">
+        <%= image_tag 'connectionicon.png' %>
+        <h3>Connections</h3>
+        <%= link_to about_path, class: 'button secondary large-12' do %>
+        Learn more
+        <% end %>
+      </div>
     </div>
   </div>
-</div>
 
-<%= render 'layouts/acquisition/connect' %>
+  <%= render 'layouts/acquisition/connect' %>
 
 <% end %>
