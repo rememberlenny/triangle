@@ -11,34 +11,58 @@
     <p class="small">No credit card required</p>
 
   </div>
+</div>
+<div class="white-bg large-12">
+  <div class="row hero-sub">
+    <div class="large-6 column">
+          <h3>Scan headlines, intelligently.</h3>
+          <p>News Triangle provides you content filter based on your social networks. Integrate with every social services without worrying about compatability. Read news with your entire digital network by your side.</p>
 
-  <div class="large-12 column">
-    <div class="row">
-        <h2>News Triangle uses your networks to highlight relevant news</h2>
-      <p >Your social networks are a treasure trove of data. Help identify news that relates to you by filtering it with your social network.</p>
-      <div class="large-4 column text-center">
-        <%= image_tag 'locationicon.png' %>
-        <h3>Locations</h3>
-        <%= link_to about_path, class: 'button secondary large-12' do %>
-        Learn more
-        <% end %>
-      </div>
-      <div class="large-4 column text-center">
-        <%= image_tag 'companyicon.png' %>
-        <h3>Companies</h3>
-        <%= link_to about_path, class: 'button secondary large-12' do %>
-        Learn more
-        <% end %>
-      </div>
-      <div class="large-4 column text-center">
+    </div>
+    <div class="large-6 column">
         <%= image_tag 'connectionicon.png' %>
-        <h3>Connections</h3>
-        <%= link_to about_path, class: 'button secondary large-12' do %>
-        Learn more
-        <% end %>
+    </div>
+  </div>
+  <div class="row">
+    <div class="large-6 column">
+        <%= image_tag 'locationicon.png' %>
+    </div>
+    <div class="large-6 column">
+
+    </div>
+  </div>
+  <div class="row">
+
+
+    <div class="large-12 column">
+      <div class="row">
+          <h2>News Triangle uses your networks to highlight relevant news</h2>
+        <p >Your social networks are a treasure trove of data. Help identify news that relates to you by filtering it with your social network.</p>
+        <div class="large-4 column text-center">
+          <h3>Locations</h3>
+          <%= link_to about_path, class: 'button secondary large-12' do %>
+          Learn more
+          <% end %>
+        </div>
+        <div class="large-4 column text-center">
+          <%= image_tag 'companyicon.png' %>
+          <h3>Companies</h3>
+          <%= link_to about_path, class: 'button secondary large-12' do %>
+          Learn more
+          <% end %>
+        </div>
+        <div class="large-4 column text-center">
+          <%= image_tag 'connectionicon.png' %>
+          <h3>Connections</h3>
+          <%= link_to about_path, class: 'button secondary large-12' do %>
+          Learn more
+          <% end %>
+        </div>
       </div>
     </div>
   </div>
+</div>
+
 
   <%= render 'layouts/acquisition/connect' %>
 

@@ -12,3 +12,10 @@ body{
   padding: 0;
   color: white;
 }
+
+.white-bg{
+  background: white;
+  h1, h2, h3, h4, p {
+    color: #000;
+  }
+}
