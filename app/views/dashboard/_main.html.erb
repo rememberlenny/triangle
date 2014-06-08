@@ -9,10 +9,10 @@
         </h2>
       </div>
       <div class="large-4 column">
-        <% if current_user.is_facebook == true do %>
+        <% if current_user.is_facebook == true %>
           <a href="#" class="disabled button">Connected</a>
         <% else %>
-          <a href="#" class="button">Connect</a>
+          <%= link_to 'Connect', user_omniauth_authorize_path(provider: "facebook"), class: 'button' %>
         <% end %>
       </div>
     </div>
@@ -23,7 +23,7 @@
         </h2>
       </div>
       <div class="large-4 column">
-        <% if current_user.is_linkedin == true do %>
+        <% if current_user.is_linkedin == true %>
           <a href="#" class="disabled button">Connected</a>
         <% else %>
           <a href="#" class="button">Connect</a>
@@ -37,7 +37,7 @@
         </h2>
       </div>
       <div class="large-4 column">
-        <% if current_user.is_twitter == true do %>
+        <% if current_user.is_twitter == true %>
           <a href="#" class="disabled button">Connected</a>
         <% else %>
           <a href="#" class="button">Connect</a>
