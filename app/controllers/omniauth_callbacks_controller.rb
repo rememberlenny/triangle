@@ -4,7 +4,15 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
     class_eval %Q{
       def #{provider}
         @user = User.find_for_oauth(env["omniauth.auth"], current_user)
-
+        if provider == 'facebook'
+          current_user.is_facebook = true
+        end
+        if provider == 'linkedin'
+          current_user.is_linkedin = true
+        end
+        if provider == 'twitter'
+          current_user.is_twitter = true
+        end
         if @user.persisted?
           sign_in_and_redirect @user, event: :authentication
           set_flash_message(:notice, :success, kind: "#{provider}".capitalize) if is_navigational_format?
