@@ -1,0 +1,19 @@
+.hero{
+  h1{
+    font-size: 2em;
+    font-weight: 200;
+    letter-spacing: 1px;
+  }
+  h2{
+    color: inherit;
+    font-size:1.15em;
+    font-weight: 100;
+    line-height: 1.5em;
+    letter-spacing: 1px;
+    margin: 0.4em 0 2em;
+  }
+  .small{
+    font-size: 80%;
+    opacity: .9
+  }
+}

@@ -4,15 +4,18 @@
 
 <% else %>
 
-  <div class="large-12 colum">
-    <img src="http://fakeimg.pl/1000x300?text=pretty picture here">
-    <h1>News tips <br>from your friends</h1>
-    <p>Your social networks are a treasure trove of data. Help identify news that relates to you by filtering it with your social network.</p>
+  <div class="large-12 colum hero text-center ">
+    <h1>Highlight, filter, and identify relevant news</h1>
+    <h2 class="subheader">News aggregation designed and built for connected people</h2>
+    <%= link_to 'Sign up for free', new_user_registration_path, class: 'button small secondary radius large-3' %>
+    <p class="small">No credit card required</p>
+
   </div>
 
   <div class="large-12 column">
     <div class="row">
         <h2>News Triangle uses your networks to highlight relevant news</h2>
+      <p >Your social networks are a treasure trove of data. Help identify news that relates to you by filtering it with your social network.</p>
       <div class="large-4 column text-center">
         <%= image_tag 'locationicon.png' %>
         <h3>Locations</h3>
