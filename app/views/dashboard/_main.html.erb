@@ -9,7 +9,11 @@
         </h2>
       </div>
       <div class="large-4 column">
-        <a href="#" class="button">Connect</a>
+        <%if current_user.is_facebook == true do %>
+          <a href="#" class="disabled button">Connected</a>
+        <% else %>
+          <a href="#" class="button">Connect</a>
+        <% end %>
       </div>
     </div>
     <div class="row">
@@ -19,7 +23,11 @@
         </h2>
       </div>
       <div class="large-4 column">
-        <a href="#" class="disabled button">Connect</a>
+        <% if current_user.is_linkedin == true do %>
+          <a href="#" class="disabled button">Connected</a>
+        <% else %>
+          <a href="#" class="button">Connect</a>
+        <% end %>
       </div>
     </div>
     <div class="row">
@@ -29,7 +37,11 @@
         </h2>
       </div>
       <div class="large-4 column">
-        <a href="#" class="disabled button">Connect</a>
+        <% if current_user.is_twitter == true do %>
+          <a href="#" class="disabled button">Connected</a>
+        <% else %>
+          <a href="#" class="button">Connect</a>
+        <% end %>
       </div>
     </div>
     <div class="row">
