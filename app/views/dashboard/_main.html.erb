@@ -12,7 +12,7 @@
         <% if current_user.is_facebook == true %>
           <a href="#" class="disabled button">Connected</a>
         <% else %>
-          <%= link_to 'Connect', user_omniauth_authorize_path(provider: "facebook"), class: 'button' %>
+          <%= link_to 'Connect', user_omniauth_authorize_path(:facebook), class: 'button' %>
         <% end %>
       </div>
     </div>

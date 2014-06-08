@@ -8,7 +8,10 @@ class Identity < ActiveRecord::Base
     identity = create(uid: auth.uid, provider: auth.provider) if identity.nil?
     identity
   end
-
+  def destroy
+    self.current_user = nil
+    redirect_to root_url, notice: "Signed out!"
+  end
   def create
     auth = request.env['omniauth.auth']
     # Find an identity here
