@@ -12,12 +12,12 @@ var max = 2;
 var current = min;
 
 function check_for_title(){
-  window.nt_titles = $(document).find('h1 a, h2 a, h3 a, h4 a, h5 a');
-  for(var i = 0; i < window.nt_titles.length; i++){
+  var nt_titles = $(document).find('h1 a, h2 a, h3 a, h4 a, h5 a');
+  for(var i = 0; i < nt_titles.length; i++){
     $.ajax({
       type: "POST",
       url: "http://ec2-54-87-182-165.compute-1.amazonaws.com/html2story",
-      data: $('body').html(),
+      data: $(nt_titles[i]).html(),
       crossDomain: false
     })
     .done(function( msg ) {
@@ -27,14 +27,13 @@ function check_for_title(){
 }
 
 function updateIcon() {
+  console.log(chrome.windows.getLastFocused());
+  check_for_title();
   chrome.browserAction.setIcon({path:"icon" + current + ".png"});
   current++;
-
   if (current > max){
     current = min;
   }
-
-  check_for_title();
 }
 
 chrome.browserAction.onClicked.addListener(updateIcon);
