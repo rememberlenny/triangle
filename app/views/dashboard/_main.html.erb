@@ -5,7 +5,7 @@
   <div class="large-12 column">
     <h1>Step 1: Connect</h1>
     <p>Connect your News Triangle account to your networks.</p>
-    <div class="row">
+     <div class="row">
       <div class="large-6 large-offset-2 column">
         <h2>
           Facebook
@@ -14,36 +14,48 @@
       <div class="large-4 column">
         <% if current_user.auth_hash_facebook != nil %>
           <a href="#" class="disabled button">Connected</a>
+          <a href="">Look at details</a>
+      </div>
+      <div class="row">
+        <%= current_user.auth_hash_facebook.to_yaml %>
         <% else %>
-          <%= link_to 'Connect', user_omniauth_authorize_path(:facebook), class: 'button' %>
+          <%= link_to 'Connect', user_omniauth_authorize_path(:facebook), class: "button" %>
         <% end %>
       </div>
     </div>
     <div class="row">
       <div class="large-6 large-offset-2 column">
-        <h2 class="">
-          LinkedIn
-        </h2>
-      </div>
-      <div class="large-4 column">
-        <% if current_user.auth_hash_linkedin != nil %>
-          <a href="#" class="disabled button">Connected</a>
-        <% else %>
-          <%= link_to 'Connect', user_omniauth_authorize_path(:linkedin), class: 'button' %>
-        <% end %>
-      </div>
-    </div>
-    <div class="row">
-      <div class="large-6 large-offset-2 column">
-        <h2 class="">
+        <h2>
           Twitter
         </h2>
       </div>
       <div class="large-4 column">
         <% if current_user.auth_hash_twitter != nil %>
           <a href="#" class="disabled button">Connected</a>
+          <a href="">Look at details</a>
+      </div>
+      <div class="row">
+        <%= current_user.auth_hash_twitter.to_yaml %>
         <% else %>
-          <%= link_to 'Connect', user_omniauth_authorize_path(:twitter), class: 'button' %>
+          <%= link_to 'Connect', user_omniauth_authorize_path(:twitter), class: "button" %>
+        <% end %>
+      </div>
+    </div>
+    <div class="row">
+      <div class="large-6 large-offset-2 column">
+        <h2>
+          Linkedin
+        </h2>
+      </div>
+      <div class="large-4 column">
+        <% if current_user.auth_hash_linkedin != nil %>
+          <a href="#" class="disabled button">Connected</a>
+          <a href="">Look at details</a>
+      </div>
+      <div class="row">
+        <%= current_user.auth_hash_linkedin.to_yaml %>
+        <% else %>
+          <%= link_to 'Connect', user_omniauth_authorize_path(:linkedin), class: "button" %>
         <% end %>
       </div>
     </div>
