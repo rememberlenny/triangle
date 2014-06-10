@@ -18,6 +18,7 @@ gem 'omniauth-linkedin'
 gem 'rails_12factor'
 gem "koala", "~> 1.8.0rc1"
 gem 'devise'
+gem 'pry'
 gem "skylight"
 
 group :development do
