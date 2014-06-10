@@ -80,17 +80,17 @@ Newshack::Application.configure do
   config.action_dispatch.x_sendfile_header = 'X-Accel-Redirect'
   config.assets.compile = false
 
-  config.action_mailer.default_url_options = { :host => 'newstriangle.herokuapp.com' }
+  config.action_mailer.default_url_options = { :host => 'www.atriangle.com' }
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.perform_deliveries = true
   config.action_mailer.smtp_settings = {
-    address: 'smtp.gmail.com', 
+    address: 'smtp.gmail.com',
     port: '587',
     enable_starttls_auto: true,
     user_name: ENV['NT_EMAIL_USER'],
     password: ENV['NT_EMAIL_PASS'],
     :authentication => 'plain',
-    :domain => 'newstriangle.herokuapp.com'
+    :domain => 'atriangle.com'
   }
   # Use default logging formatter so that PID and timestamp are not suppressed.
   config.log_formatter = ::Logger::Formatter.new
