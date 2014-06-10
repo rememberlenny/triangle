@@ -41,7 +41,6 @@ class AddFieldsToUser < ActiveRecord::Migration
     add_column :users, :twitter_description, :string
     add_column :users, :twitter_Website, :string
     add_column :users, :twitter_Twitter, :string
-    add_column :users, :twitter_name, :string
     add_column :users, :twitter_listed_count, :string
     add_column :users, :twitter_profile_sidebar_border_color, :string
     add_column :users, :twitter_url, :string
@@ -49,7 +48,6 @@ class AddFieldsToUser < ActiveRecord::Migration
     add_column :users, :twitter_statuses_count, :string
     add_column :users, :twitter_profile_image_url, :string
     add_column :users, :twitter_profile_background_image_url_https, :string
-    add_column :users, :twitter_location, :string
     add_column :users, :twitter_time_zone, :string
     add_column :users, :twitter_follow_request_sent, :string
     add_column :users, :twitter_id, :string
@@ -69,10 +67,6 @@ class AddFieldsToUser < ActiveRecord::Migration
     add_column :users, :twitter_geo_enabled, :string
     add_column :users, :twitter_profile_background_image_url, :string
     add_column :users, :twitter_protected, :string
-    add_column :users, :twitter_description, :string
-    add_column :users, :twitter_profile_link_color, :string
-    add_column :users, :twitter_created_at, :string
-    add_column :users, :twitter_id_str, :string
     add_column :users, :twitter_profile_image_url_https, :string
     add_column :users, :twitter_default_profile, :string
     add_column :users, :twitter_profile_use_background_image, :string
