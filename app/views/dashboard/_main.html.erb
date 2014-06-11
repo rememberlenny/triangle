@@ -13,14 +13,15 @@
       </div>
       <div class="large-4 column">
         <% if current_user.auth_hash_facebook != nil %>
-          <a href="#" class="disabled button">Connected</a>
-          <a href="">Look at details</a>
+          <a href="#" class="disabled button secondary">Connected</a>
+          <a href="" class="button secondary">Details</a>
       </div>
     </div>
     <div class="row">
-      <pre>
-        <%= YAML::load(current_user.auth_hash_facebook).to_json %>
-      </pre>
+        <div id="test"></div>
+        <script>
+          var auth_hash_facebook = <%= YAML::load(current_user.auth_hash_facebook).to_json.html_safe %>
+        </script>
       <% else %>
         <%= link_to 'Connect', user_omniauth_authorize_path(:facebook), class: "button" %>
       <% end %>
@@ -33,14 +34,16 @@
       </div>
       <div class="large-4 column">
         <% if current_user.auth_hash_twitter != nil %>
-          <a href="#" class="disabled button">Connected</a>
-          <a href="">Look at details</a>
+          <a href="#" class="disabled button secondary">Connected</a>
+          <a href="" class="button secondary">Details</a>
       </div>
     </div>
     <div class="row">
-      <pre>
-        <%=  YAML::load(current_user.auth_hash_twitter).to_json %>
-      </pre>
+        <script>
+          var auth_hash_twitter = <%=  YAML::load(current_user.auth_hash_twitter).to_json.html_safe %>
+        </script>
+        <div id="jsonview_twitter">
+        </div>
       <% else %>
         <%= link_to 'Connect', user_omniauth_authorize_path(:twitter), class: "button" %>
       <% end %>
@@ -53,14 +56,14 @@
       </div>
       <div class="large-4 column">
         <% if current_user.auth_hash_linkedin != nil %>
-          <a href="#" class="disabled button">Connected</a>
-          <a href="">Look at details</a>
+          <a href="#" class="disabled button secondary">Connected</a>
+          <a href="" class="button secondary">Details</a>
       </div>
     </div>
     <div class="row">
-      <pre>
-        <%= YAML::load(current_user.auth_hash_linkedin).to_json %>
-      </pre>
+        <script>
+          var auth_hash_linkedin = <%= YAML::load(current_user.auth_hash_linkedin).to_json.html_safe %>
+        </script>
 
       <% else %>
         <%= link_to 'Connect', user_omniauth_authorize_path(:linkedin), class: "button" %>
