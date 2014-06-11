@@ -17,7 +17,9 @@
           <a href="">Look at details</a>
       </div>
       <div class="row">
-        <%= current_user.auth_hash_facebook.to_yaml %>
+        <pre>
+          <%= current_user.auth_hash_facebook %>
+        </pre>
         <% else %>
           <%= link_to 'Connect', user_omniauth_authorize_path(:facebook), class: "button" %>
         <% end %>
@@ -35,7 +37,9 @@
           <a href="">Look at details</a>
       </div>
       <div class="row">
-        <%= current_user.auth_hash_twitter.to_yaml %>
+        <pre>
+          <%=  current_user.auth_hash_twitter %>
+        </pre>
         <% else %>
           <%= link_to 'Connect', user_omniauth_authorize_path(:twitter), class: "button" %>
         <% end %>
@@ -53,7 +57,9 @@
           <a href="">Look at details</a>
       </div>
       <div class="row">
-        <%= current_user.auth_hash_linkedin.to_yaml %>
+        <pre>
+          <%= current_user.auth_hash_linkedin %>
+        </pre>
         <% else %>
           <%= link_to 'Connect', user_omniauth_authorize_path(:linkedin), class: "button" %>
         <% end %>
