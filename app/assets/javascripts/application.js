@@ -17,5 +17,3 @@
 //= require_tree .
 
 $(function(){ $(document).foundation(); });
-
-var jsonHtmlTable = ConvertJsonToTable([auth_hash_facebook], 'test', null, 'View')
