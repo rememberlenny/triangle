@@ -12,19 +12,25 @@
   </head>
 
   <body>
-    <%= render 'layouts/topnav' %>
+  <div class="row">
+    <div class="text-center hero-sub ">
+      <h2>Connecting the dots.</h2>
+      <div class="hero-sub">
 
-    <div class="row">
-      <% if notice %>
-      <p class="info alert-box notice-bar"><%= notice %></p>
-      <% end %>
-      <% if alert %>
-      <p class="alert alert-box notice-bar"><%= alert %></p>
-      <% end %>
-      <%= yield %>
+      <a href="https://github.com/rememberlenny/threepoints" class="button large-6 large secondary">Three Points</a>
+      <a href="http://citymish.com" class="button large-6 large secondary">Citymish</a>
+      <a href="http://fidget.io" class="button large-6 large secondary">Fidgit</a>
+      <a href="http://mapmade.io" class="button large-6 large secondary">Mapmade</a>
+      <a href="http://howdid.it/" class="button large-6 large secondary">HowDidIt</a>
+      <a href="http://twoweektedtalk.com/" class="button large-6 large secondary">TwoWeekTedTalk</a>
+      <a href="http://buildhook.com/" class="button large-6 large secondary">BuildHook</a>
+      <a href="http://whowroteforsesrp.com/" class="button large-6 large secondary">WhoWroteForSesrp</a>
+      <a href="http://whatissokaeducation.com/" class="button large-6 large secondary">WhatIsSokaEducation</a>
+      <div class="row">Projects by <a href="http://twitter.com/rememberlenny" style="color:white">Leonard K. Bogdonoff</a></div>
+      </div>
     </div>
 
-    <%= render 'layouts/footer' %>
+  </div>
     <%= javascript_include_tag "application" %>
 
   </body>
