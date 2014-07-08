@@ -7,19 +7,7 @@ gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
 gem 'foundation-rails'
-gem 'maxminddb'
-gem 'smarter_csv'
-gem 'unirest'
-gem "squeel"
-gem 'omniauth'
-gem 'omniauth-twitter'
-gem 'omniauth-facebook'
-gem 'omniauth-linkedin'
-gem 'rails_12factor'
-gem "koala", "~> 1.8.0rc1"
-gem 'devise'
-gem 'pry'
-gem "skylight"
+
 
 group :development do
   gem 'better_errors'
