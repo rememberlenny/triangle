@@ -13,9 +13,9 @@ Starting with geography, then moving to companies. and eventually other areas, A
 
 # Concept
 
-![Grid Example](https://raw.githubusercontent.com/rememberlenny/a-triangle/master/app/assets/images/demo/demo-grid.gif)
+![Grid Example](https://raw.githubusercontent.com/rememberlenny/triangle/master/app/assets/images/demo/demo-grid.gif)
 
-![Single Example](https://raw.githubusercontent.com/rememberlenny/a-triangle/master/app/assets/images/demo/demo-single.gif)
+![Single Example](https://raw.githubusercontent.com/rememberlenny/triangle/master/app/assets/images/demo/demo-single.gif)
 
 # Running
 - Background job: `rake jobs:work`
