@@ -1,8 +1,8 @@
-Repository: [https://github.com/rememberlenny/a-triangle](https://github.com/rememberlenny/a-triangle)
+Repository: [https://github.com/rememberlenny/triangle](https://github.com/rememberlenny/triangle)
 
 Site: [http://www.atriangle.com](http://www.atriangle.com)
 
-![Grid Example](https://raw.githubusercontent.com/rememberlenny/a-triangle/master/app/assets/images/facebook/coverimage.png)
+![Grid Example](https://raw.githubusercontent.com/rememberlenny/triangle/master/app/assets/images/facebook/coverimage.png)
 
 # A Triangle
 
