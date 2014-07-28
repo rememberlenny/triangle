@@ -11,42 +11,52 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140610125701) do
+ActiveRecord::Schema.define(version: 20140513045040) do
 
-  create_table "identities", force: true do |t|
-    t.integer  "user_id"
-    t.string   "provider"
-    t.string   "uid"
+  create_table "articles", force: true do |t|
+    t.text     "content"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  add_index "identities", ["user_id"], name: "index_identities_on_user_id"
+  create_table "locations", force: true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "geoname_id"
+    t.string   "continent_code"
+    t.string   "continent_name"
+    t.string   "country_iso_code"
+    t.string   "country_name"
+    t.string   "subdivision_iso_code"
+    t.string   "subdivision_name"
+    t.string   "city_name"
+    t.integer  "metro_code"
+    t.string   "time_zone"
+  end
+
+  create_table "products", force: true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "geoname_id"
+    t.string   "continent_code"
+    t.string   "continent_name"
+    t.string   "country_iso_code"
+    t.string   "country_name"
+    t.string   "subdivision_iso_code"
+    t.string   "subdivision_name"
+    t.string   "city_name"
+    t.integer  "metro_code"
+    t.string   "time_zone"
+  end
 
   create_table "users", force: true do |t|
-    t.string   "email",                  default: "", null: false
-    t.string   "encrypted_password",     default: "", null: false
-    t.string   "reset_password_token"
-    t.datetime "reset_password_sent_at"
-    t.datetime "remember_created_at"
-    t.integer  "sign_in_count",          default: 0,  null: false
-    t.datetime "current_sign_in_at"
-    t.datetime "last_sign_in_at"
-    t.string   "current_sign_in_ip"
-    t.string   "last_sign_in_ip"
-    t.string   "confirmation_token"
-    t.datetime "confirmed_at"
-    t.datetime "confirmation_sent_at"
-    t.string   "unconfirmed_email"
+    t.string   "provider"
+    t.string   "uid"
+    t.string   "name"
+    t.string   "oauth_token"
+    t.datetime "oauth_expires_at"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "name"
-    t.string   "auth_hash_linkedin"
-    t.string   "auth_hash_facebook"
-    t.string   "auth_hash_twitter"
   end
-
-  add_index "users", ["email"], name: "index_users_on_email", unique: true
-  add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
 
 end

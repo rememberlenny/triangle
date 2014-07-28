@@ -1,6 +1,5 @@
 Repository: [https://github.com/rememberlenny/triangle](https://github.com/rememberlenny/triangle)
 
-Site: [http://trianglenew.herokuapp.com/](http://www.trianglenew.herokuapp.com)
 
 ![Grid Example](https://raw.githubusercontent.com/rememberlenny/triangle/master/app/assets/images/facebook/coverimage.png)
 
